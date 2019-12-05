@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="DriverStationMk3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DriverStationMk3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Width="1500" Height="1000" HorizontalAlignment="Stretch" Margin="9,2,-9,-2" VerticalAlignment="Stretch">
+        <Button x:Name="cnt_btn" Content="Connect" HorizontalAlignment="Left" Margin="10,831,0,0" VerticalAlignment="Top" Height="60" Width="169" Click="Cnt_btn_Click"/>
+        <WebView x:Name="webPage" HorizontalAlignment="Left" Height="495" Margin="21,20,0,0" VerticalAlignment="Top" Width="655" LoadCompleted="WebView_LoadCompleted" FocusVisualPrimaryBrush="#FFD31D1D"/>
+        <TextBlock x:Name="tbConnected" HorizontalAlignment="Left" Margin="199,831,0,0" Text="Enabled:" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="94" FontSize="18" FontFamily="Segoe UI"/>
+        <Image x:Name="xbox" HorizontalAlignment="Left" Height="632" Margin="625,-212,0,0" VerticalAlignment="Top" Width="876" FocusVisualPrimaryBrush="{x:Null}" Source="/Assets/gamer_Elite-512.png" Stretch="UniformToFill"/>
+        <Ellipse x:Name="xBtn" HorizontalAlignment="Left" Height="43" Margin="1133,137,0,0" VerticalAlignment="Top" Width="44" Fill="#FF137FAD" Stroke="Black"/>
+        <Ellipse x:Name="yBtn" HorizontalAlignment="Left" Height="44" Margin="1169,101,0,0" VerticalAlignment="Top" Width="43" FocusVisualPrimaryBrush="#FFF8F44C" Fill="#FFECFA31" Stroke="Black"/>
+        <Ellipse x:Name="aBtn" HorizontalAlignment="Left" Height="42" Margin="1169,173,0,0" VerticalAlignment="Top" Width="43" Fill="#FF54BA20" Stroke="#FF070707"/>
+        <Ellipse x:Name="bBtn" HorizontalAlignment="Left" Height="43" Margin="1205,137,0,0" VerticalAlignment="Top" Width="45" Fill="#FFE90C0C" Stroke="Black"/>
+        <Rectangle x:Name="dUp" HorizontalAlignment="Left" Height="34" Margin="982,192,0,0" VerticalAlignment="Top" Width="35" Fill="#FF898181"/>
+        <Rectangle x:Name="dDown" HorizontalAlignment="Left" Height="34" Margin="982,259,0,0" VerticalAlignment="Top" Width="35" Fill="#FF898181"/>
+        <Rectangle x:Name="dLeft" HorizontalAlignment="Left" Height="33" Margin="949,226,0,0" VerticalAlignment="Top" Width="33" Fill="#FF898181"/>
+        <Rectangle x:Name="dRight" HorizontalAlignment="Left" Height="33" Margin="1017,226,0,0" VerticalAlignment="Top" Width="33" Fill="#FF898181"/>
+        <ProgressBar x:Name="lTrigger" HorizontalAlignment="Left" Height="35" Margin="619,193,0,0" VerticalAlignment="Top" Width="335" Foreground="#FF3FBB1B" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <ProgressBar.RenderTransform>
+                <CompositeTransform Rotation="-89.815"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="rTrigger" HorizontalAlignment="Left" Height="35" Margin="1173,190,0,0" VerticalAlignment="Top" Width="333" Foreground="#FF3FBB1B" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <ProgressBar.RenderTransform>
+                <CompositeTransform Rotation="-90.021"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ListBox x:Name="lb1" HorizontalAlignment="Left" Height="154" Margin="966,737,0,0" VerticalAlignment="Top" Width="498" SelectionChanged="Lb1_SelectionChanged"/>
+        <Button x:Name="enbl_btn" Content="Enable" HorizontalAlignment="Left" Margin="10,765,0,0" VerticalAlignment="Top" Width="169" Height="60" Click="Enbl_btn_Click"/>
+        <TextBlock x:Name="ver_txt" HorizontalAlignment="Left" Text="Driver Station Ver 3.0.20.4" TextWrapping="Wrap" VerticalAlignment="Top" Margin="21,649,0,0" Width="174"/>
+        <TextBlock x:Name="tbEnabled" HorizontalAlignment="Left" Margin="199,765,0,0" Text="Enabled:" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" RenderTransformOrigin="0.673,2.333" TextAlignment="Center" LineHeight="14" FontSize="18"/>
+        <Button x:Name="refresh_btn" Content="Browser Refresh" HorizontalAlignment="Left" Margin="10,694,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.129,1.438" Height="66" Width="169" Click="Refresh_btn_Click"/>
+
+    </Grid>
+</Page>
